@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Brand</title>
+    <link rel="stylesheet" href="home.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="f-solid fa-a"></i>
+                    <div class="logo-text">Ahmed Sheriff</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="https://wa.me/qr/CD7HU2QTKCZDB1" target="_blank">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="ahmed 1.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Ahmed Sheriff</span></h5>
+                    <h1>Logo Brand</h1>
+                    <p> 
+                        Welcome to my Website, where I create unique logo designs that reflect your brand's identity.
+                         I believe every brand deserves a design that expresses its vision and values. 
+                         With my experience and passion for creativity, I strive to deliver innovative solutions that meet your needs. 
+                         Let’s embark on a design journey together to bring your brand vision to life.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="portfolio.html"  class="btn active">Portfolio</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=61566834737757&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/logo_brand4/profilecard/?igsh=Y3cxb2Z0dm1qNGho" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+
+
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Ahmed Sheriff","A Graphic Desginer"],
+            typedSpeed:100,
+            backSpeed:150,
+            loop:true
+        })
+     </script>
+</body>
+</html>

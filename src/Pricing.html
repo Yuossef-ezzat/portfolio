@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | Youssef Ezzat</title>
+    <meta name="description"
+        content="Transparent pricing plans for web and back-end development projects by Youssef Ezzat.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main styles (reuse portfolio styles) -->
+    <link rel="stylesheet" href="Style.css">
+
+    <style>
+        /* ── Pricing Page Specific Styles ── */
+
+        .pricing-page {
+            min-height: 100vh;
+            background: var(--bg-primary);
+        }
+
+        /* ── Top Bar ── */
+        .pricing-topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 4, 22, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 14px 0;
+            transition: background 0.3s ease;
+        }
+
+        [data-theme="light"] .pricing-topbar {
+            background: rgba(244, 244, 248, 0.95);
+            border-bottom-color: rgba(128, 76, 248, 0.15);
+        }
+
+        .pricing-topbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        /* RTL topbar */
+        [dir="rtl"] .pricing-topbar-inner {
+            flex-direction: row-reverse;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 22px;
+            border-radius: 50px;
+            border: 2px solid rgba(139, 92, 246, 0.4);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: rgba(139, 92, 246, 0.06);
+            white-space: nowrap;
+        }
+
+        .back-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--text-primary);
+            background: rgba(139, 92, 246, 0.15);
+            transform: translateX(-3px);
+        }
+
+        [dir="rtl"] .back-btn {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .back-btn:hover {
+            transform: translateX(3px);
+        }
+
+        .pricing-logo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border: 2px solid rgba(139, 92, 246, 0.6);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            flex-shrink: 0;
+            transition: border-color 0.25s, box-shadow 0.25s;
+            /* Always LTR so "YE" never flips in Arabic mode */
+            direction: ltr;
+            unicode-bidi: isolate;
+        }
+
+        .pricing-logo:hover {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 14px rgba(139, 92, 246, 0.4);
+        }
+
+        .pricing-logo span {
+            color: var(--accent-color);
+        }
+
+        .topbar-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        [dir="rtl"] .topbar-controls {
+            flex-direction: row-reverse;
+        }
+
+        /* ── Hero ── */
+        .pricing-hero {
+            padding: 160px 24px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .pricing-eyebrow {
+            display: inline-block;
+            padding: 6px 18px;
+            border-radius: 30px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: var(--accent-color);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .pricing-hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 800;
+            background: var(--accent-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .pricing-hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ── Plans Grid ── */
+        .pricing-plans-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+        }
+
+        /* ── Note strip ── */
+        .pricing-note {
+            background: rgba(139, 92, 246, 0.06);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 16px;
+            padding: 24px 32px;
+            max-width: 780px;
+            margin: 0 auto 80px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .pricing-note i {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        [dir="rtl"] .pricing-note {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        /* ── Bottom CTA ── */
+        .pricing-footer-cta {
+            text-align: center;
+            padding: 60px 24px 80px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            background: var(--bg-secondary);
+        }
+
+        [data-theme="light"] .pricing-footer-cta {
+            border-top-color: rgba(128, 76, 248, 0.12);
+        }
+
+        .pricing-footer-cta h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+
+        .pricing-footer-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-size: 1rem;
+        }
+
+        .pricing-footer-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-back-portfolio {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 32px;
+            border-radius: 50px;
+            border: 2px solid var(--text-secondary);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn-back-portfolio:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateX(-3px);
+        }
+
+        [dir="rtl"] .btn-back-portfolio {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .btn-back-portfolio:hover {
+            transform: translateX(3px);
+        }
+
+        /* RTL plan cards */
+        [dir="rtl"] .plan-badge,
+        [dir="rtl"] .plan-name,
+        [dir="rtl"] .plan-desc,
+        [dir="rtl"] .plan-features {
+            text-align: right;
+        }
+
+        [dir="rtl"] .plan-features li {
+            flex-direction: row-reverse;
+        }
+
+        [dir="rtl"] .plan-price {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        [dir="rtl"] .plan-btn {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .pricing-note {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            [dir="rtl"] .pricing-note {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="pricing-page">
+
+    <!-- Top Bar -->
+    <div class="pricing-topbar">
+        <div class="pricing-topbar-inner">
+            <a href="Index.html" class="back-btn" id="backBtn">
+                <i class="fas fa-arrow-left" id="backIcon"></i>
+                <span data-en="Back to Portfolio" data-ar="العودة للبورتفوليو">Back to Portfolio</span>
+            </a>
+            <a href="Index.html" class="pricing-logo">Y<span>E</span></a>
+            <!-- Controls -->
+            <div class="topbar-controls">
+                <button id="themeToggle" class="icon-toggle-btn" aria-label="Toggle theme"
+                    title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button id="langToggle" class="icon-toggle-btn lang-btn" aria-label="Toggle language"
+                    title="Toggle Language">
+                    <span id="langLabel">AR</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="pricing-hero">
+        <span class="pricing-eyebrow" data-en="💼 Transparent Pricing" data-ar="💼 أسعار شفافة">💼 Transparent
+            Pricing</span>
+        <h1 data-en="Choose Your Plan" data-ar="اختر خطتك">Choose Your Plan</h1>
+        <p data-en="No hidden fees. Every plan is scoped to deliver real value — from a simple landing page to a full enterprise system."
+            data-ar="لا رسوم خفية. كل خطة مُصممة لتقديم قيمة حقيقية — من صفحة هبوط بسيطة إلى نظام مؤسسي متكامل.">
+            No hidden fees. Every plan is scoped to deliver real value — from a simple landing page to a full enterprise
+            system.
+        </p>
+    </div>
+
+    <!-- Plans Grid -->
+    <div class="pricing-plans-wrap">
+
+        <!-- Note strip -->
+        <div class="pricing-note">
+            <i class="fas fa-info-circle"></i>
+            <span
+                data-en="All plans include source code delivery, clean architecture, and a post-launch review session. Prices are estimates — final cost depends on project scope."
+                data-ar="جميع الخطط تشمل تسليم الكود المصدري، وبنية نظيفة، وجلسة مراجعة بعد الإطلاق. الأسعار تقديرية — التكلفة النهائية تعتمد على نطاق المشروع.">
+                All plans include source code delivery, clean architecture, and a post-launch review session. Prices
+                are estimates — final cost depends on project scope.
+            </span>
+        </div>
+
+        <div class="plans-grid">
+
+            <!-- Basic Card -->
+            <div class="plan-card">
+                <div class="plan-badge" data-en="Starter" data-ar="مبتدئ">Starter</div>
+                <div class="plan-icon"><i class="fas fa-rocket"></i></div>
+                <h3 class="plan-name" data-en="Basic" data-ar="أساسي">Basic</h3>
+                <div class="plan-price">
+                    <span class="plan-currency">$</span>
+                    <span class="plan-amount">25-50</span>
+                    <span class="plan-period" data-en="/project" data-ar="/مشروع">/project</span>
+                </div>
+                <p class="plan-desc" data-en="Perfect for small landing pages and simple static websites."
+                    data-ar="مثالي للصفحات الترويجية الصغيرة والمواقع الثابتة البسيطة.">
+                    Perfect for small landing pages and simple static websites.
+                </p>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> <span data-en="Up to 3–6 Pages" data-ar="حتى 3–6 صفحات">Up to 3–6
+                            Pages</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Responsive Design" data-ar="تصميم متجاوب">Responsive
+                            Design</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Contact Form" data-ar="نموذج تواصل">Contact
+                            Form</span></li>
+                    <li><i class="fas fa-times disabled"></i> <span data-en="Database Integration"
+                            data-ar="ربط قاعدة بيانات">Database Integration</span></li>
+                    <li><i class="fas fa-times disabled"></i> <span data-en="Admin Dashboard" data-ar="لوحة تحكم">Admin
+                            Dashboard</span></li>
+                    <li><i class="fas fa-times disabled"></i> <span data-en="API Development" data-ar="تطوير API">API
+                            Development</span></li>
+                </ul>
+                <a href="Index.html#contact" class="plan-btn" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
+            </div>
+
+            <!-- Balance Card (Featured) -->
+            <div class="plan-card plan-card--featured">
+                <div class="plan-badge featured-badge" data-en="Popular" data-ar="الأكثر طلباً">Popular</div>
+                <div class="plan-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3 class="plan-name" data-en="Balance" data-ar="بالانس">Balance</h3>
+                <div class="plan-price">
+                    <span class="plan-currency">$</span>
+                    <span class="plan-amount">499</span>
+                    <span class="plan-period" data-en="/project" data-ar="/مشروع">/project</span>
+                </div>
+                <p class="plan-desc" data-en="Ideal for business websites with database and user management."
+                    data-ar="مثالي لمواقع الأعمال مع قاعدة بيانات وإدارة المستخدمين.">
+                    Ideal for business websites with database and user management.
+                </p>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> <span data-en="Up to 10 Pages" data-ar="حتى 10 صفحات">Up to 10
+                            Pages</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Everything in Basic"
+                            data-ar="كل ما في الأساسي">Everything in Basic</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Database Integration"
+                            data-ar="ربط قاعدة بيانات">Database Integration</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="User Authentication"
+                            data-ar="تسجيل دخول المستخدمين">User Authentication</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="API Development" data-ar="تطوير API">API
+                            Development</span></li>
+                </ul>
+                <a href="Index.html#contact" class="plan-btn plan-btn--featured" data-en="Get Started"
+                    data-ar="ابدأ الآن">Get Started</a>
+            </div>
+
+            <!-- PRO Card -->
+            <div class="plan-card">
+                <div class="plan-badge" data-en="Best Value" data-ar="أفضل قيمة"><i class="fas fa-crown"></i> Best Value
+                </div>
+                <div class="plan-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="plan-name" data-en="PRO" data-ar="PRO">PRO</h3>
+                <div class="plan-price">
+                    <span class="plan-currency">$</span>
+                    <span class="plan-amount">1,299</span>
+                    <span class="plan-period" data-en="/project" data-ar="/مشروع">/project</span>
+                </div>
+                <p class="plan-desc" data-en="Full-stack web application with API, dashboard, and payment integration."
+                    data-ar="تطبيق ويب متكامل مع API ولوحة تحكم وبوابة دفع.">
+                    Full-stack web application with API, dashboard, and payment integration.
+                </p>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> <span data-en="Everything in Balance"
+                            data-ar="كل ما في بالانس">Everything in Balance</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Unlimited Pages"
+                            data-ar="صفحات غير محدودة">Unlimited Pages</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="RESTful API Development"
+                            data-ar="تطوير RESTful API">RESTful API Development</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Admin Dashboard" data-ar="لوحة تحكم">Admin
+                            Dashboard</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Payment Gateway (Stripe)"
+                            data-ar="بوابة دفع (Stripe)">Payment Gateway (Stripe)</span></li>
+                </ul>
+                <a href="Index.html#contact" class="plan-btn" data-en="Get Started" data-ar="ابدأ الآن">Get Started</a>
+            </div>
+
+            <!-- Custom Card -->
+            <div class="plan-card">
+                <div class="plan-badge" data-en="Enterprise" data-ar="مؤسسي">Enterprise</div>
+                <div class="plan-icon"><i class="fas fa-cogs"></i></div>
+                <h3 class="plan-name" data-en="Custom" data-ar="مخصص">Custom</h3>
+                <div class="plan-price">
+                    <span class="plan-amount custom-price-text" data-en="Let's Talk" data-ar="تحدث معي">Let's
+                        Talk</span>
+                </div>
+                <p class="plan-desc"
+                    data-en="Tailored solutions for complex enterprise projects with unique requirements."
+                    data-ar="حلول مخصصة للمشاريع المؤسسية المعقدة ذات المتطلبات الفريدة.">
+                    Tailored solutions for complex enterprise projects with unique requirements.
+                </p>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> <span data-en="Everything in PRO" data-ar="كل ما في PRO">Everything
+                            in PRO</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Custom Architecture" data-ar="بنية مخصصة">Custom
+                            Architecture</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Redis Caching" data-ar="تخزين مؤقت Redis">Redis
+                            Caching</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Priority Support" data-ar="دعم فني مميز">Priority
+                            Support</span></li>
+                    <li><i class="fas fa-check"></i> <span data-en="Dedicated Maintenance"
+                            data-ar="صيانة مخصصة">Dedicated Maintenance</span></li>
+                </ul>
+                <a href="Index.html#contact" class="plan-btn" data-en="Contact Me" data-ar="تواصل معي">Contact Me</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer CTA -->
+    <div class="pricing-footer-cta">
+        <h2 data-en="Not Sure Which Plan Fits?" data-ar="لست متأكداً من الخطة المناسبة؟">
+            Not Sure Which Plan Fits?
+        </h2>
+        <p data-en="Reach out and we'll figure out the best scope and budget together."
+            data-ar="تواصل معي وسنحدد معاً أفضل نطاق وميزانية لمشروعك.">
+            Reach out and we'll figure out the best scope and budget together.
+        </p>
+        <div class="pricing-footer-btns">
+            <a href="Index.html#contact" class="btn btn-primary"
+                style="display:inline-flex;align-items:center;gap:10px;" data-en="Contact Me" data-ar="تواصل معي">
+                <i class="fas fa-envelope"></i> Contact Me
+            </a>
+            <a href="Index.html" class="btn-back-portfolio" data-en="Back to Portfolio" data-ar="العودة للبورتفوليو">
+                <i class="fas fa-arrow-left" id="footerBackIcon"></i>
+                <span data-en="Back to Portfolio" data-ar="العودة للبورتفوليو">Back to Portfolio</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // ── 1. Theme Toggle ──────────────────────────────────────
+        (function () {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (!themeToggle) return;
+
+            const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+            html.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const current = html.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', next);
+                localStorage.setItem('portfolio-theme', next);
+                updateThemeIcon(next);
+            });
+
+            function updateThemeIcon(theme) {
+                if (!themeIcon) return;
+                themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+                themeToggle.title = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+            }
+        }());
+
+        // ── 2. Language Toggle ───────────────────────────────────
+        (function () {
+            const langToggle = document.getElementById('langToggle');
+            const langLabel = document.getElementById('langLabel');
+            const html = document.documentElement;
+            const backIcon = document.getElementById('backIcon');
+            const footerBackIcon = document.getElementById('footerBackIcon');
+
+            if (!langToggle) return;
+
+            function getTranslatables() {
+                return document.querySelectorAll('[data-en]');
+            }
+
+            const savedLang = localStorage.getItem('portfolio-lang') || 'en';
+            applyLanguage(savedLang);
+
+            langToggle.addEventListener('click', () => {
+                const current = html.getAttribute('lang') === 'ar' ? 'ar' : 'en';
+                const next = current === 'en' ? 'ar' : 'en';
+                localStorage.setItem('portfolio-lang', next);
+                applyLanguage(next);
+            });
+
+            function applyLanguage(lang) {
+                html.setAttribute('lang', lang);
+                html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+                if (langLabel) langLabel.textContent = lang === 'ar' ? 'EN' : 'AR';
+
+                // Flip back-arrow icons in RTL
+                const isRtl = lang === 'ar';
+                if (backIcon) backIcon.className = isRtl ? 'fas fa-arrow-right' : 'fas fa-arrow-left';
+                if (footerBackIcon) footerBackIcon.className = isRtl ? 'fas fa-arrow-right' : 'fas fa-arrow-left';
+
+                getTranslatables().forEach(el => {
+                    const text = el.getAttribute('data-' + lang);
+                    if (!text) return;
+
+                    const hasChildElements = el.children.length > 0;
+                    if (hasChildElements) {
+                        for (const node of el.childNodes) {
+                            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                                node.textContent = text + ' ';
+                                break;
+                            }
+                        }
+                    } else {
+                        el.textContent = text;
+                    }
+                });
+            }
+        }());
+    </script>
+
+</body>
+
+</html>

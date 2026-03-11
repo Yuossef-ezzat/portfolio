@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youssef Ezzat | Software Engineer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/Style.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container header-container">
+
+            <!-- Logo icon (square with initials) -->
+            <a href="#hero" class="logo-icon" aria-label="Home">
+                <span>Y</span><span class="logo-icon-accent">E</span>
+            </a>
+
+            <!-- Centered nav links -->
+            <nav class="nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-en="About" data-ar="عني">About</a></li>
+                    <li><a href="#edu-certs" class="nav-link" data-en="Education" data-ar="التعليم">Education</a></li>
+                    <li><a href="#skills" class="nav-link" data-en="Skills" data-ar="المهارات">Skills</a></li>
+                    <li><a href="#experience" class="nav-link" data-en="Experience" data-ar="الخبرة">Experience</a></li>
+                    <li><a href="#services" class="nav-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+                    <li><a href="#projects" class="nav-link" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+                    <li><a href="#testimonials" class="nav-link" data-en="Testimonials"
+                            data-ar="التوصيات">Testimonials</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA button + hamburger -->
+            <div class="nav-right">
+                <!-- Theme Toggle -->
+                <button id="themeToggle" class="icon-toggle-btn" aria-label="Toggle theme"
+                    title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <!-- Language Toggle -->
+                <button id="langToggle" class="icon-toggle-btn lang-btn" aria-label="Toggle language"
+                    title="Toggle Language">
+                    <span id="langLabel">AR</span>
+                </button>
+                <a href="#contact" class="btn-contact-me" data-en="Contact Me" data-ar="تواصل معي">Contact Me</a>
+                <div class="menu-btn" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <span class="close-menu"><i class="fas fa-times"></i></span>
+        <ul>
+            <li><a href="#hero" class="mobile-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+            <li><a href="#about" class="mobile-link" data-en="About" data-ar="عني">About</a></li>
+            <li><a href="#edu-certs" class="mobile-link" data-en="Education" data-ar="التعليم">Education</a></li>
+            <li><a href="#skills" class="mobile-link" data-en="Skills" data-ar="المهارات">Skills</a></li>
+            <li><a href="#experience" class="mobile-link" data-en="Experience" data-ar="الخبرة">Experience</a></li>
+            <li><a href="#services" class="mobile-link" data-en="Services" data-ar="الخدمات">Services</a></li>
+            <li><a href="#projects" class="mobile-link" data-en="Projects" data-ar="المشاريع">Projects</a></li>
+            <li><a href="#testimonials" class="mobile-link" data-en="Testimonials" data-ar="التوصيات">Testimonials</a>
+            </li>
+            <li><a href="#contact" class="mobile-link" data-en="Contact" data-ar="تواصل">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-container-flex">
+            <div class="hero-text-content">
+                <p class="hero-subtitle" data-en="Welcome to my world" data-ar="أهلاً بك في عالمي">Welcome to my world
+                </p>
+                <h1 class="hero-title">Hi, I'm <br> <span>Youssef Ezzat</span></h1>
+                <h2 class="hero-role"><span data-en="Software Engineer" data-ar="مهندس برمجيات">Software Engineer</span>
+                </h2>
+                <p class="hero-description"
+                    data-en="I build scalable, high-performance .NET web and desktop applications with clean, maintainable code."
+                    data-ar="أبني تطبيقات ويب وسطح مكتب عالية الأداء باستخدام .NET بكود نظيف وقابل للصيانة.">
+                    I build scalable, high-performance .NET web and desktop applications with clean, maintainable code.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-en="My Portfolio" data-ar="أعمالي">My Portfolio</a>
+                    <a href="https://drive.google.com/uc?export=download&id=1cTUq_HCYz5xPPo3Av6TfrNBJp7JFizl4"
+                        class="btn btn-outline" data-en="Download CV" data-ar="تحميل السيرة الذاتية">Download CV <i
+                            class="fas fa-download"></i></a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/Yuossef-ezzat" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yuossef-ezzat-168248306" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="img-placeholder"
+                style="background-image: url('pics/myphoto.jpeg'); background-size: cover; background-position: center;">
+                <i class="fas fa-user-code"></i>
+            </div>
+
+
+        </div>
+
+        <div class="scroll-down">
+            <a href="#about">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title" data-en="About Me" data-ar="عني">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <!-- Placeholder for User Image -->
+                    <div class="hero-img-box">
+                        <!-- Using the same placeholder or new image structure -->
+                        <div class="img-placeholder-hero">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="hero-visual">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 data-en="Driven by Passion & Performance" data-ar="شغوف بالأداء">Driven by Passion &
+                        Performance</h3>
+                    <p data-en="I am Youssef, driven by a passion for programming that has guided me for over four years. I am a junior back-end developer specializing in building scalable and efficient desktop and web applications using .NET APIs and MVC, with hands-on experience across more than 3 projects, focusing on clean code, performance, and maintainable solutions."
+                        data-ar="أنا يوسف، شغوف بالبرمجة منذ أكثر من أربع سنوات. أنا مطور back-end متخصص في بناء تطبيقات ويب وسطح مكتب قابلة للتطوير باستخدام .NET APIs و MVC، مع خبرة عملية في أكثر من 3 مشاريع.">
+                        I am Youssef, driven by a passion for programming that has guided me <strong>for over four
+                            years</strong> . I am a
+                        junior back-end developer specializing in building scalable and efficient <strong>desktop and
+                            web
+                            applications</strong> using .NET APIs and MVC, with hands-on experience across <strong>more
+                            than 3
+                            projects</strong>,
+                        focusing on clean code, performance, and maintainable solutions.
+                    </p>
+                    <p data-en="My journey involves hands-on experience with complex projects, implementing architectures like Onion Architecture and design patterns such as Repository and Unit of Work."
+                        data-ar="تجربتي تشمل العمل على مشاريع معقدة وتطبيق معماريات مثل Onion Architecture وأنماط تصميم كـ Repository و Unit of Work.">
+                        My journey involves hands-on experience with complex projects, implementing architectures like
+                        <strong>Onion Architecture</strong>
+                        and design patterns such as <strong>Repository and Unit of Work</strong>.
+                    </p>
+                    <ul class="about-details">
+                        <li><span data-en="Projects:" data-ar="المشاريع:"><i class="fas fa-code"></i> Projects:</span>
+                            3+</li>
+                        <li><span data-en="Location:" data-ar="الموقع:"><i class="fas fa-map-marker-alt"></i>
+                                Location:</span> <span data-en="Egypt" data-ar="مصر">Egypt</span></li>
+                        <li><span data-en="Availability:" data-ar="التوفر:"><i class="fas fa-briefcase"></i>
+                                Availability:</span> <span data-en="Open to Work" data-ar="متاح للعمل">Open to
+                                Work</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="edu-certs" class="section edu-certs-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Education & Certifications" data-ar="التعليم والشهادات">Education &
+                Certifications</h2>
+            <div class="edu-certs-grid">
+                <!-- Education Column -->
+                <div class="edu-column">
+                    <h3 class="subsection-title" data-en="Education" data-ar="التعليم"><i
+                            class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="education-card">
+                        <!-- University Logo -->
+                        <div class="edu-logo-wrap">
+                            <img src="pics/Helwan.png" alt="Helwan University" class="edu-logo-img"
+                                onerror="this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-university\'></i>'">
+                        </div>
+
+                        <!-- Degree Title -->
+                        <h3 class="edu-degree" data-en="Bachelor's Degree in Computer Science"
+                            data-ar="بكالوريوس علوم الحاسب">
+                            Bachelor's Degree in Computer Science
+                        </h3>
+
+                        <!-- Faculty & University -->
+                        <p class="edu-school" data-en="Faculty of Computer and Information · Helwan University"
+                            data-ar="كلية الحاسبات والمعلومات · جامعة حلوان">
+                            Faculty of Computer and Information · Helwan University
+                        </p>
+
+                        <!-- Year -->
+                        <span class="edu-date">2023 — 2027</span>
+                    </div>
+                </div>
+
+                <!-- Certifications Column -->
+                <div class="certs-column">
+                    <h3 class="subsection-title" data-en="Certifications" data-ar="الشهادات"><i
+                            class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="certs-list">
+                        <a href="https://drive.google.com/file/d/1q75Wf5Uy2eJ68QVbcwf4pcjt_gxPJEZn/view?usp=drive_link"
+                            target="_blank" rel="noopener" class="cert-card-compact">
+                            <div class="cert-icon-sm cert-logo-wrap">
+                                <img src="pics/route.png" alt="Route Academy" class="cert-logo-img"
+                                    onerror="this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-graduation-cap\'></i>'">
+                            </div>
+                            <div class="cert-info">
+                                <h3 data-en="Back-end (.net Core) diploma"
+                                    data-ar="دبلومة تطوير الواجهة الخلفية بالدوت نت">
+                                    Back-end (.net Core) diploma
+                                </h3>
+                                <p>Route Academy • 2025</p>
+                            </div>
+                            <i class="fas fa-external-link-alt cert-link-icon"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/12fvrNIB6Ls5cCNcQqcbCqD6Ws2g7bcsz/view?usp=drive_link"
+                            target="_blank" rel="noopener" class="cert-card-compact">
+                            <div class="cert-icon-sm cert-logo-wrap">
+                                <img src="Sprints.png" alt="Sprints" class="cert-logo-img"
+                                    onerror="this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-code\'></i>'">
+                            </div>
+                            <div class="cert-info">
+                                <h3 data-en="Web Development" data-ar="تطوير الويب">Web Development</h3>
+                                <p>Sprints • 2025</p>
+                            </div>
+                            <i class="fas fa-external-link-alt cert-link-icon"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1jMS7jtf1sNiFZutNt4iNTnz_13gzHatz/view?usp=sharing"
+                            target="_blank" rel="noopener" class="cert-card-compact">
+                            <div class="cert-icon-sm cert-logo-wrap">
+                                <img src="pics/Sprints.png" alt="Sprints" class="cert-logo-img"
+                                    onerror="this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<i class=\'fab fa-flask\'></i>'">
+                            </div>
+                            <div class="cert-info">
+                                <h3 data-en="Software Testing" data-ar="اختبار البرمجيات">Software Testing</h3>
+                                <p>Sprints • 2025</p>
+                            </div>
+                            <i class="fas fa-external-link-alt cert-link-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Technical Skills" data-ar="المهارات التقنية">Technical Skills</h2>
+
+            <!-- Filter Buttons -->
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="backend">
+                    <i class="fas fa-server"></i><span data-en="Back End" data-ar="الخلفية">Back End</span>
+                </button>
+                <button class="filter-btn" data-filter="frontend">
+                    <i class="fas fa-laptop-code"></i><span data-en="Front End" data-ar="الواجهة">Front End</span>
+                </button>
+                <button class="filter-btn" data-filter="fullstack">
+                    <i class="fas fa-code-branch"></i><span data-en="Full Stack" data-ar="فول ستاك">Full Stack</span>
+                </button>
+                <button class="filter-btn" data-filter="soft">
+                    <i class="fas fa-brain"></i><span data-en="Soft Skills" data-ar="مهارات شخصية">Soft Skills</span>
+                </button>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card" data-category="fullstack">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="netGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#06b6d4" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="8" width="48" height="48" rx="10" stroke="url(#netGrad)" stroke-width="2.5"
+                                fill="url(#netGrad)" fill-opacity="0.08" />
+                            <text x="32" y="38" text-anchor="middle" font-size="15" font-weight="800"
+                                font-family="monospace" fill="url(#netGrad)">.NET</text>
+                            <line x1="14" y1="44" x2="50" y2="44" stroke="url(#netGrad)" stroke-width="1.5"
+                                opacity="0.4" />
+                            <circle cx="20" cy="22" r="3" fill="url(#netGrad)" fill-opacity="0.6" />
+                            <circle cx="32" cy="20" r="4" fill="url(#netGrad)" fill-opacity="0.4" />
+                            <circle cx="44" cy="22" r="3" fill="url(#netGrad)" fill-opacity="0.6" />
+                        </svg>
+                    </div>
+                    <h3 data-en=".NET Core / MVC" data-ar="دوت نت كور / MVC">.NET Core / MVC</h3>
+                    <p data-en="Building scalable, maintainable web applications using .NET MVC."
+                        data-ar="بناء تطبيقات ويب قابلة للتطوير باستخدام .NET MVC.">Building scalable,
+                        maintainable web applications using .NET MVC.</p>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="deskSkillGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#a78bfa" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="10" width="48" height="34" rx="5" stroke="url(#deskSkillGrad)"
+                                stroke-width="2.5" fill="url(#deskSkillGrad)" fill-opacity="0.08" />
+                            <rect x="13" y="15" width="38" height="24" rx="3" fill="url(#deskSkillGrad)"
+                                fill-opacity="0.12" stroke="url(#deskSkillGrad)" stroke-width="1.5"
+                                stroke-dasharray="3 2" />
+                            <line x1="32" y1="44" x2="32" y2="52" stroke="url(#deskSkillGrad)" stroke-width="3"
+                                stroke-linecap="round" />
+                            <path d="M22 52 L42 52" stroke="url(#deskSkillGrad)" stroke-width="3"
+                                stroke-linecap="round" />
+                            <rect x="17" y="19" width="10" height="7" rx="2" fill="url(#deskSkillGrad)"
+                                fill-opacity="0.5" />
+                            <line x1="31" y1="21" x2="46" y2="21" stroke="url(#deskSkillGrad)" stroke-width="1.8"
+                                stroke-linecap="round" opacity="0.7" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Desktop Applications" data-ar="تطبيقات سطح المكتب">Desktop Applications</h3>
+                    <p data-en="Building scalable, maintainable Desktop applications using .NET."
+                        data-ar="بناء تطبيقات سطح مكتب قابلة للتطوير باستخدام .NET.">Building scalable, maintainable
+                        Desktop applications using .NET.</p>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="sqlGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#d946ef" />
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx="32" cy="16" rx="18" ry="7" stroke="url(#sqlGrad)" stroke-width="2.5"
+                                fill="url(#sqlGrad)" fill-opacity="0.15" />
+                            <path d="M14 16v16c0 3.87 8.06 7 18 7s18-3.13 18-7V16" stroke="url(#sqlGrad)"
+                                stroke-width="2.5" fill="none" />
+                            <path d="M14 24c0 3.87 8.06 7 18 7s18-3.13 18-7" stroke="url(#sqlGrad)" stroke-width="2"
+                                fill="none" stroke-dasharray="4 2" />
+                            <path d="M14 32v8c0 3.87 8.06 7 18 7s18-3.13 18-7v-8" stroke="url(#sqlGrad)"
+                                stroke-width="2.5" fill="none" />
+                            <circle cx="24" cy="16" r="2" fill="url(#sqlGrad)" />
+                            <circle cx="32" cy="16" r="2" fill="url(#sqlGrad)" />
+                            <circle cx="40" cy="16" r="2" fill="url(#sqlGrad)" />
+                        </svg>
+                    </div>
+                    <h3 data-en="SQL Server" data-ar="SQL سيرفر">SQL Server</h3>
+                    <p data-en="Building a Database for a System for storing the Data."
+                        data-ar="بناء قواعد بيانات فعالة لتخزين البيانات.">Building a Database for a System for storing
+                        the Data.</p>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="apiSkillGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#06b6d4" />
+                                    <stop offset="100%" stop-color="#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M20 12 C14 12 12 16 12 22 L12 28 C12 31 10 32 8 32 C10 32 12 33 12 36 L12 42 C12 48 14 52 20 52"
+                                stroke="url(#apiSkillGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <path
+                                d="M44 12 C50 12 52 16 52 22 L52 28 C52 31 54 32 56 32 C54 32 52 33 52 36 L52 42 C52 48 50 52 44 52"
+                                stroke="url(#apiSkillGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <circle cx="25" cy="32" r="2.5" fill="url(#apiSkillGrad)" />
+                            <circle cx="32" cy="32" r="2.5" fill="url(#apiSkillGrad)" />
+                            <circle cx="39" cy="32" r="2.5" fill="url(#apiSkillGrad)" />
+                        </svg>
+                    </div>
+                    <h3 data-en="RESTful APIs" data-ar="واجهات REST البرمجية">RESTful APIs</h3>
+                    <p data-en="Building a RESTful APIs for a System." data-ar="بناء واجهات RESTful APIs للأنظمة.">
+                        Building a RESTful APIs for a System.</p>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="patternGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#f59e0b" />
+                                    <stop offset="100%" stop-color="#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="14" r="6" stroke="url(#patternGrad)" stroke-width="2.5"
+                                fill="url(#patternGrad)" fill-opacity="0.15" />
+                            <circle cx="14" cy="44" r="6" stroke="url(#patternGrad)" stroke-width="2.5"
+                                fill="url(#patternGrad)" fill-opacity="0.15" />
+                            <circle cx="50" cy="44" r="6" stroke="url(#patternGrad)" stroke-width="2.5"
+                                fill="url(#patternGrad)" fill-opacity="0.15" />
+                            <line x1="32" y1="20" x2="14" y2="38" stroke="url(#patternGrad)" stroke-width="2"
+                                stroke-dasharray="3 2" />
+                            <line x1="32" y1="20" x2="50" y2="38" stroke="url(#patternGrad)" stroke-width="2"
+                                stroke-dasharray="3 2" />
+                            <line x1="20" y1="44" x2="44" y2="44" stroke="url(#patternGrad)" stroke-width="2"
+                                stroke-dasharray="3 2" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Design Patterns" data-ar="أنماط التصميم">Design Patterns</h3>
+                    <p data-en="Building a Design Patterns for a System."
+                        data-ar="تطبيق أنماط التصميم لبناء أنظمة متينة.">Building a Design Patterns for a System.</p>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="redisGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#ef4444" />
+                                    <stop offset="100%" stop-color="#f59e0b" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="10" y="10" width="44" height="14" rx="4" stroke="url(#redisGrad)"
+                                stroke-width="2.5" fill="url(#redisGrad)" fill-opacity="0.12" />
+                            <rect x="10" y="30" width="44" height="14" rx="4" stroke="url(#redisGrad)"
+                                stroke-width="2.5" fill="url(#redisGrad)" fill-opacity="0.12" />
+                            <rect x="10" y="50" width="20" height="6" rx="3" fill="url(#redisGrad)" fill-opacity="0.3"
+                                stroke="url(#redisGrad)" stroke-width="1.5" />
+                            <circle cx="48" cy="17" r="3" fill="url(#redisGrad)" />
+                            <circle cx="48" cy="37" r="3" fill="url(#redisGrad)" fill-opacity="0.5" />
+                            <line x1="18" y1="17" x2="38" y2="17" stroke="url(#redisGrad)" stroke-width="2"
+                                stroke-linecap="round" opacity="0.7" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Redis & Caching" data-ar="Redis والتخزين المؤقت">Redis & Caching</h3>
+                    <p data-en="Building a Redis & Caching for High Performance."
+                        data-ar="تطبيق Redis والتخزين المؤقت لضمان أداء عالي.">Building a Redis & Caching for High
+                        Performance.</p>
+                </div>
+                <!-- Front End Skills -->
+                <div class="skill-card" data-category="frontend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="htmlGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#f97316" />
+                                    <stop offset="100%" stop-color="#3b82f6" />
+                                </linearGradient>
+                            </defs>
+                            <polygon points="10,8 54,8 49,56 32,61 15,56" stroke="url(#htmlGrad)" stroke-width="2.5"
+                                fill="url(#htmlGrad)" fill-opacity="0.08" stroke-linejoin="round" />
+                            <polyline points="19,18 32,18 45,18" stroke="url(#htmlGrad)" stroke-width="2"
+                                stroke-linecap="round" />
+                            <polyline points="21,28 32,28 43,28" stroke="url(#htmlGrad)" stroke-width="2"
+                                stroke-linecap="round" opacity="0.75" />
+                            <polyline points="24,38 32,50 40,38" stroke="url(#htmlGrad)" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+                        </svg>
+                    </div>
+                    <h3 data-en="HTML5 / CSS3" data-ar="HTML5 / CSS3">HTML5 / CSS3</h3>
+                    <p data-en="Crafting modern, responsive and accessible web interfaces with semantic markup."
+                        data-ar="تصميم واجهات ويب حديثة ومتجاوبة باستخدام HTML الدلالي.">Crafting modern, responsive and
+                        accessible web interfaces with semantic markup.</p>
+                </div>
+                <div class="skill-card" data-category="frontend">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="jsGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#facc15" />
+                                    <stop offset="100%" stop-color="#f97316" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="8" width="48" height="48" rx="8" stroke="url(#jsGrad)" stroke-width="2.5"
+                                fill="url(#jsGrad)" fill-opacity="0.1" />
+                            <text x="32" y="42" text-anchor="middle" font-size="22" font-weight="900"
+                                font-family="monospace" fill="url(#jsGrad)">JS</text>
+                            <circle cx="52" cy="14" r="4" fill="url(#jsGrad)" fill-opacity="0.6" />
+                        </svg>
+                    </div>
+                    <h3 data-en="JavaScript" data-ar="جافاسكريبت">JavaScript</h3>
+                    <p data-en="Building dynamic and interactive web experiences with vanilla JavaScript."
+                        data-ar="بناء تجارب ويب ديناميكية وتفاعلية باستخدام JavaScript.">Building dynamic and
+                        interactive web experiences with vanilla JavaScript.</p>
+                </div>
+                <!-- Soft Skills -->
+                <div class="skill-card" data-category="soft">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="commGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#10b981" />
+                                    <stop offset="100%" stop-color="#06b6d4" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="10" width="36" height="26" rx="8" stroke="url(#commGrad)" stroke-width="2.5"
+                                fill="url(#commGrad)" fill-opacity="0.1" />
+                            <path d="M8 36 L14 44 L14 36" fill="url(#commGrad)" fill-opacity="0.6"
+                                stroke="url(#commGrad)" stroke-width="1.5" stroke-linejoin="round" />
+                            <rect x="22" y="28" width="34" height="22" rx="8" stroke="url(#commGrad)" stroke-width="2.5"
+                                fill="url(#commGrad)" fill-opacity="0.1" />
+                            <path d="M56 50 L50 58 L50 50" fill="url(#commGrad)" fill-opacity="0.6"
+                                stroke="url(#commGrad)" stroke-width="1.5" stroke-linejoin="round" />
+                            <circle cx="20" cy="23" r="2" fill="url(#commGrad)" />
+                            <circle cx="26" cy="23" r="2" fill="url(#commGrad)" fill-opacity="0.6" />
+                            <circle cx="32" cy="23" r="2" fill="url(#commGrad)" fill-opacity="0.4" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Communication" data-ar="التواصل">Communication</h3>
+                    <p data-en="Clearly conveying ideas and collaborating effectively across teams and stakeholders."
+                        data-ar="إيصال الأفكار بوضوح والتعاون الفعّال مع الفريق.">Clearly conveying ideas and
+                        collaborating effectively across teams and stakeholders.</p>
+                </div>
+                <div class="skill-card" data-category="soft">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="teamGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#ec4899" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="20" cy="22" r="8" stroke="url(#teamGrad)" stroke-width="2.5"
+                                fill="url(#teamGrad)" fill-opacity="0.12" />
+                            <circle cx="44" cy="22" r="8" stroke="url(#teamGrad)" stroke-width="2.5"
+                                fill="url(#teamGrad)" fill-opacity="0.12" />
+                            <path d="M8 52 C8 42 14 38 20 38 C26 38 28 40 32 40 C36 40 38 38 44 38 C50 38 56 42 56 52"
+                                stroke="url(#teamGrad)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+                            <circle cx="32" cy="20" r="5" fill="url(#teamGrad)" fill-opacity="0.4"
+                                stroke="url(#teamGrad)" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Teamwork" data-ar="العمل الجماعي">Teamwork</h3>
+                    <p data-en="Working collaboratively in agile teams to deliver high-quality results on time."
+                        data-ar="العمل بشكل تعاوني في فرق رشيقة لتحقيق نتائج عالية الجودة.">Working collaboratively in
+                        agile teams to deliver high-quality results on time.</p>
+                </div>
+                <div class="skill-card" data-category="soft">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="problemGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#facc15" />
+                                    <stop offset="100%" stop-color="#10b981" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M32 8 C20 8 12 17 12 27 C12 34 16 40 22 43 L22 52 L42 52 L42 43 C48 40 52 34 52 27 C52 17 44 8 32 8 Z"
+                                stroke="url(#problemGrad)" stroke-width="2.5" fill="url(#problemGrad)"
+                                fill-opacity="0.1" />
+                            <line x1="22" y1="56" x2="42" y2="56" stroke="url(#problemGrad)" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="32" y1="20" x2="32" y2="34" stroke="url(#problemGrad)" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <circle cx="32" cy="40" r="2.5" fill="url(#problemGrad)" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Problem Solving" data-ar="حل المشكلات">Problem Solving</h3>
+                    <p data-en="Analyzing complex challenges and crafting efficient, clean, and logical solutions."
+                        data-ar="تحليل التحديات وابتكار حلول فعّالة ومنطقية.">Analyzing complex challenges and crafting
+                        efficient, clean, and logical solutions.</p>
+                </div>
+                <div class="skill-card" data-category="soft">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="timeGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#06b6d4" />
+                                    <stop offset="100%" stop-color="#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="32" cy="34" r="22" stroke="url(#timeGrad)" stroke-width="2.5"
+                                fill="url(#timeGrad)" fill-opacity="0.08" />
+                            <line x1="32" y1="34" x2="32" y2="20" stroke="url(#timeGrad)" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="32" y1="34" x2="42" y2="40" stroke="url(#timeGrad)" stroke-width="2.5"
+                                stroke-linecap="round" />
+                            <circle cx="32" cy="34" r="3" fill="url(#timeGrad)" />
+                            <line x1="44" y1="8" x2="38" y2="12" stroke="url(#timeGrad)" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Time Management" data-ar="إدارة الوقت">Time Management</h3>
+                    <p data-en="Prioritizing tasks effectively to meet deadlines without compromising quality."
+                        data-ar="ترتيب المهام بفعالية للوفاء بالمواعيد دون التنازل عن الجودة.">Prioritizing tasks
+                        effectively to meet deadlines without compromising quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Work Experience" data-ar="الخبرة المهنية">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date" data-en="2025 - Present" data-ar="2025 - حتى الآن">2025 -
+                            Present</span>
+                        <h3 class="timeline-role" data-en="Back-End Training - .Net" data-ar="تدريب Back-End - .NET">
+                            Back-End Training - .Net</h3>
+                        <h4 class="timeline-company">
+                            <div class="company-logos">
+                                <div class="company-logo-badge">
+                                    <img src="pics/DEPI.png" alt="DEPI" class="company-logo-img"
+                                        onerror="this.onerror=null;this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-flag\'></i>'">
+                                </div>
+                            </div>
+                            Digital Egypt Pioneers Initiative (DEPI) — Hyperd
+                        </h4>
+                        <div class="timeline-desc">
+                            <dl>
+                                <dt data-en="Challenge" data-ar="التحدي"><i class="fas fa-exclamation-circle"></i>
+                                    Challenge</dt>
+                                <dd data-en="Building Scalable, Maintainable web applications using .Net."
+                                    data-ar="بناء تطبيقات ويب قابلة للتطوير والصيانة باستخدام .Net.">Building Scalable,
+                                    Maintainable web applications using .Net .</dd>
+
+                                <dt data-en="Action" data-ar="الإجراء"><i class="fas fa-tools"></i> Action</dt>
+                                <dd data-en="Developed maintain websites using .Net framework, focusing on clean code and performance."
+                                    data-ar="تطوير مواقع ويب باستخدام إطار .Net مع التركيز على الكود النظيف والأداء.">
+                                    Developed maintain websites using .Net framework, focusing on
+                                    clean code and performance.</dd>
+
+                                <dt data-en="Result" data-ar="النتيجة"><i class="fas fa-check-circle"></i> Result</dt>
+                                <dd data-en="Delivered production-ready, clean, maintainable code."
+                                    data-ar="تسليم كود جاهز للإنتاج، نظيف وقابل للصيانة.">Delivered production-ready,
+                                    clean,
+                                    maintainable code.</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Optional, kept brief) -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Services" data-ar="الخدمات">Services</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="dbGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#d946ef" />
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx="32" cy="16" rx="18" ry="7" stroke="url(#dbGrad)" stroke-width="2.5"
+                                fill="url(#dbGrad)" fill-opacity="0.15" />
+                            <path d="M14 16v16c0 3.87 8.06 7 18 7s18-3.13 18-7V16" stroke="url(#dbGrad)"
+                                stroke-width="2.5" fill="none" />
+                            <path d="M14 24c0 3.87 8.06 7 18 7s18-3.13 18-7" stroke="url(#dbGrad)" stroke-width="2"
+                                fill="none" stroke-dasharray="4 2" />
+                            <path d="M14 32v8c0 3.87 8.06 7 18 7s18-3.13 18-7v-8" stroke="url(#dbGrad)"
+                                stroke-width="2.5" fill="none" />
+                            <ellipse cx="32" cy="40" rx="18" ry="7" stroke="url(#dbGrad)" stroke-width="2"
+                                fill="url(#dbGrad)" fill-opacity="0.08" />
+                            <circle cx="24" cy="16" r="2" fill="url(#dbGrad)" />
+                            <circle cx="32" cy="16" r="2" fill="url(#dbGrad)" />
+                            <circle cx="40" cy="16" r="2" fill="url(#dbGrad)" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Database Design" data-ar="تصميم قواعد البيانات">Database Design</h3>
+                    <p data-en="Efficient schemas optimized for performance and scalability."
+                        data-ar="سكيمات فعّالة محسّنة للأداء والتوسع.">Efficient schemas optimized for performance and
+                        scalability.</p>
+                    <div class="service-tools">
+                        <span class="service-tool-tag"><i class="fas fa-server"></i> SQL Server</span>
+                        <span class="service-tool-tag"><i class="fas fa-code"></i> Entity Framework</span>
+                        <span class="service-tool-tag"><i class="fas fa-table"></i> T-SQL</span>
+                        <span class="service-tool-tag"><i class="fas fa-project-diagram"></i> LINQ</span>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="apiGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#06b6d4" />
+                                    <stop offset="100%" stop-color="#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M20 12 C14 12 12 16 12 22 L12 28 C12 31 10 32 8 32 C10 32 12 33 12 36 L12 42 C12 48 14 52 20 52"
+                                stroke="url(#apiGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <path
+                                d="M44 12 C50 12 52 16 52 22 L52 28 C52 31 54 32 56 32 C54 32 52 33 52 36 L52 42 C52 48 50 52 44 52"
+                                stroke="url(#apiGrad)" stroke-width="3" stroke-linecap="round" fill="none" />
+                            <circle cx="25" cy="32" r="2.5" fill="url(#apiGrad)" />
+                            <circle cx="32" cy="32" r="2.5" fill="url(#apiGrad)" />
+                            <circle cx="39" cy="32" r="2.5" fill="url(#apiGrad)" />
+                        </svg>
+                    </div>
+                    <h3 data-en="API Development" data-ar="تطوير الواجهات البرمجية">API Development</h3>
+                    <p data-en="Secure and documented RESTful APIs for web & mobile apps."
+                        data-ar="واجهات RESTful آمنة وموثقة لتطبيقات الويب والجوال.">Secure and documented RESTful APIs
+                        for web & mobile apps.</p>
+                    <div class="service-tools">
+                        <span class="service-tool-tag"><i class="fab fa-microsoft"></i> .NET Core</span>
+                        <span class="service-tool-tag"><i class="fas fa-file-alt"></i> Swagger</span>
+                        <span class="service-tool-tag"><i class="fas fa-lock"></i> JWT Auth</span>
+                        <span class="service-tool-tag"><i class="fas fa-flask"></i> Postman</span>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="webGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#8b5cf6" />
+                                    <stop offset="100%" stop-color="#ec4899" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="12" width="48" height="40" rx="6" stroke="url(#webGrad)" stroke-width="2.5"
+                                fill="url(#webGrad)" fill-opacity="0.08" />
+                            <line x1="8" y1="22" x2="56" y2="22" stroke="url(#webGrad)" stroke-width="2" />
+                            <circle cx="15" cy="17" r="2" fill="#f43f5e" opacity="0.8" />
+                            <circle cx="22" cy="17" r="2" fill="#f59e0b" opacity="0.8" />
+                            <circle cx="29" cy="17" r="2" fill="#10b981" opacity="0.8" />
+                            <path d="M16 32 L22 38 L16 44" stroke="url(#webGrad)" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            <line x1="28" y1="44" x2="48" y2="44" stroke="url(#webGrad)" stroke-width="2"
+                                stroke-linecap="round" opacity="0.5" />
+                            <line x1="28" y1="38" x2="42" y2="38" stroke="url(#webGrad)" stroke-width="2"
+                                stroke-linecap="round" opacity="0.7" />
+                            <line x1="28" y1="32" x2="48" y2="32" stroke="url(#webGrad)" stroke-width="2"
+                                stroke-linecap="round" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Web Applications" data-ar="تطبيقات الويب">Web Applications</h3>
+                    <p data-en="Building full-featured web applications using the .NET ecosystem."
+                        data-ar="بناء تطبيقات ويب متكاملة باستخدام منظومة .NET.">Building full-featured web applications
+                        using the .NET ecosystem.</p>
+                    <div class="service-tools">
+                        <span class="service-tool-tag"><i class="fab fa-microsoft"></i> ASP.NET MVC</span>
+                        <span class="service-tool-tag"><i class="fas fa-layer-group"></i> Razor Pages</span>
+                        <span class="service-tool-tag"><i class="fas fa-memory"></i> Redis</span>
+                        <span class="service-tool-tag"><i class="fas fa-credit-card"></i> Stripe</span>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="service-svg-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="deskGrad" x1="0" y1="0" x2="64" y2="64"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#a78bfa" />
+                                    <stop offset="100%" stop-color="#38bdf8" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="8" y="10" width="48" height="34" rx="5" stroke="url(#deskGrad)" stroke-width="2.5"
+                                fill="url(#deskGrad)" fill-opacity="0.08" />
+                            <rect x="13" y="15" width="38" height="24" rx="3" fill="url(#deskGrad)" fill-opacity="0.12"
+                                stroke="url(#deskGrad)" stroke-width="1.5" stroke-dasharray="3 2" />
+                            <line x1="32" y1="44" x2="32" y2="52" stroke="url(#deskGrad)" stroke-width="3"
+                                stroke-linecap="round" />
+                            <path d="M22 52 L42 52" stroke="url(#deskGrad)" stroke-width="3" stroke-linecap="round" />
+                            <rect x="17" y="19" width="10" height="7" rx="2" fill="url(#deskGrad)" fill-opacity="0.5" />
+                            <line x1="31" y1="21" x2="46" y2="21" stroke="url(#deskGrad)" stroke-width="1.8"
+                                stroke-linecap="round" opacity="0.7" />
+                            <line x1="31" y1="25" x2="42" y2="25" stroke="url(#deskGrad)" stroke-width="1.8"
+                                stroke-linecap="round" opacity="0.5" />
+                            <line x1="17" y1="31" x2="46" y2="31" stroke="url(#deskGrad)" stroke-width="1.5"
+                                stroke-linecap="round" opacity="0.4" />
+                        </svg>
+                    </div>
+                    <h3 data-en="Desktop Applications" data-ar="تطبيقات سطح المكتب">Desktop Applications</h3>
+                    <p data-en="Robust business logic implementation using .NET."
+                        data-ar="تطبيق منطق أعمال قوي باستخدام .NET.">Robust business logic implementation using .NET.
+                    </p>
+                    <div class="service-tools">
+                        <span class="service-tool-tag"><i class="fas fa-window-maximize"></i> WinForms</span>
+                        <span class="service-tool-tag"><i class="fas fa-paint-brush"></i> WPF</span>
+                        <span class="service-tool-tag"><i class="fas fa-code"></i> C#</span>
+                        <span class="service-tool-tag"><i class="fas fa-database"></i> SQL Server</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services CTA -->
+            <div class="services-cta">
+                <p data-en="Ready to start your project?" data-ar="هل أنت مستعد لبدء مشروعك؟">Ready to start your
+                    project?</p>
+                <a href="src/Pricing.html" class="btn btn-primary"
+                    style="display:inline-flex;align-items:center;gap:10px;" data-en="View Pricing Plans"
+                    data-ar="عرض خطط الأسعار">
+                    <i class="fas fa-tags"></i> View Pricing Plans
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Featured Projects" data-ar="أبرز المشاريع">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="pics/p1.jpg" alt="Talabat Store API" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <div class="project-icon"><i class="fas fa-shopping-basket"></i></div>
+                            <h3 class="project-title" data-en="Talabat Store API" data-ar="واجهة متجر طلبات">Talabat
+                                Store API</h3>
+                        </div>
+                        <div class="timeline-desc">
+                            <dl>
+                                <dt data-en="Challenge" data-ar="التحدي"><i class="fas fa-exclamation-circle"></i>
+                                    Challenge</dt>
+                                <dd data-en="Build a full e-commerce back-end with real payment integration, high-performance caching, and clean layered architecture."
+                                    data-ar="بناء back-end متكامل لتجارة إلكترونية مع دفع حقيقي، تخزين مؤقت وبنية نظيفة.">
+                                    Build a full e-commerce back-end with real payment integration, high-performance
+                                    caching, and clean layered architecture.</dd>
+
+                                <dt data-en="Action" data-ar="الإجراء"><i class="fas fa-tools"></i> Action</dt>
+                                <dd data-en="Developed a .NET Core Onion Architecture API with Redis caching, Stripe payment gateway, and a complete order management system."
+                                    data-ar="تطوير API بمعمارية Onion مع Redis و Stripe ونظام إدارة طلبات متكامل.">
+                                    Developed a .NET Core Onion Architecture API with Redis caching, Stripe payment
+                                    gateway, and a complete order management system including basket and delivery
+                                    services.</dd>
+
+                                <dt data-en="Result" data-ar="النتيجة"><i class="fas fa-check-circle"></i> Result</dt>
+                                <dd data-en="Delivered a production-ready API with sub-50ms response times on cached endpoints and a fully documented Swagger UI."
+                                    data-ar="تسليم API جاهز للإنتاج بزمن استجابة أقل من 50ms مع Swagger موثق.">Delivered
+                                    a production-ready API with sub-50ms response times on cached endpoints
+                                    and a fully documented Swagger UI.</dd>
+                            </dl>
+                        </div>
+                        <ul class="project-tags">
+                            <li>.NET Core</li>
+                            <li>Redis</li>
+                            <li>Stripe</li>
+                            <li>Onion Arch</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/Yuossef-ezzat/E-Commerse-talabat.git" class="btn-sm"
+                                target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrap">
+                        <img src="pics/p2.png" alt="MVC Inventory System" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <div class="project-icon"><i class="fas fa-boxes"></i></div>
+                            <h3 class="project-title" data-en="MVC Inventory System" data-ar="نظام إدارة المخزون MVC">
+                                MVC Inventory System</h3>
+                        </div>
+                        <div class="timeline-desc">
+                            <dl>
+                                <dt data-en="Challenge" data-ar="التحدي"><i class="fas fa-exclamation-circle"></i>
+                                    Challenge</dt>
+                                <dd data-en="Create a desktop-class inventory management web app with role-based access, real-time stock tracking, and audit history."
+                                    data-ar="إنشاء تطبيق إدارة مخزون متكامل بصلاحيات قائمة على الدور وتتبع المخزون.">
+                                    Create a desktop-class inventory management web app with role-based access,
+                                    real-time stock tracking, and audit history.</dd>
+
+                                <dt data-en="Action" data-ar="الإجراء"><i class="fas fa-tools"></i> Action</dt>
+                                <dd data-en="Built an ASP.NET MVC application using Repository & Unit of Work patterns with SQL Server and Identity for authentication."
+                                    data-ar="بناء تطبيق ASP.NET MVC بأنماط Repository و Unit of Work مع SQL Server و Identity.">
+                                    Built an ASP.NET MVC application using Repository & Unit of Work patterns, SQL
+                                    Server, and Identity for authentication, with transaction logging on every stock
+                                    movement.</dd>
+
+                                <dt data-en="Result" data-ar="النتيجة"><i class="fas fa-check-circle"></i> Result</dt>
+                                <dd data-en="Delivered a fully functional inventory system with role separation, accurate stock alerts, and a clean maintainable codebase."
+                                    data-ar="تسليم نظام مخزون متكامل بفصل الصلاحيات وتنبيهات المخزون وكود نظيف.">
+                                    Delivered a fully functional inventory system with role separation, accurate stock
+                                    alerts, and a clean maintainable codebase.</dd>
+                            </dl>
+                        </div>
+                        <ul class="project-tags">
+                            <li>ASP.NET MVC</li>
+                            <li>SQL Server</li>
+                            <li>Repository Pattern</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn-sm"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Testimonials" data-ar="آراء العملاء">Testimonials</h2>
+        </div>
+
+        <!-- Full-width marquee (outside container for edge-to-edge) -->
+        <div class="testimonials-marquee-wrap">
+            <div class="testimonials-marquee" id="testimonialsMarquee">
+
+                <!-- === Original 4 cards === -->
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-bolt"></i> Proactive</span>
+                    </div>
+                    <p class="testimonial-text">"Youssef demonstrated exceptional skill in building our back-end API.
+                        His use of clean architecture and Redis caching dramatically improved our system response
+                        times."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-info">
+                            <h4>Ahmed Karim</h4>
+                            <span>E-Commerce Project Lead</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-graduation-cap"></i> Committed Learner</span>
+                    </div>
+                    <p class="testimonial-text">"During the DEPI initiative, Youssef showed exceptional commitment. His
+                        grasp of .NET architecture patterns like Repository and Unit of Work was highly impressive."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Sara Mostafa</h4>
+                            <span>DEPI Training Instructor</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-check-circle"></i> Excellent Student</span>
+                    </div>
+                    <p class="testimonial-text">"Youssef's Talabat Store API was a highlight of the course. He
+                        implemented Stripe integration and advanced order management with professionalism that exceeded
+                        expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">OH</div>
+                        <div class="testimonial-info">
+                            <h4>Omar Hassan</h4>
+                            <span>Senior Instructor, Route Academy</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-star"></i> Top Performer</span>
+                    </div>
+                    <p class="testimonial-text">"Working with Youssef on the MVC Inventory System was a great
+                        experience. He delivered clean, maintainable code on time with deep understanding of SQL Server
+                        and design patterns."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">NK</div>
+                        <div class="testimonial-info">
+                            <h4>Nour Khalil</h4>
+                            <span>Team Lead, Hyperd</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- === Duplicate 4 cards for seamless infinite loop === -->
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-bolt"></i> Proactive</span>
+                    </div>
+                    <p class="testimonial-text">"Youssef demonstrated exceptional skill in building our back-end API.
+                        His use of clean architecture and Redis caching dramatically improved our system response
+                        times."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-info">
+                            <h4>Ahmed Karim</h4>
+                            <span>E-Commerce Project Lead</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-graduation-cap"></i> Committed Learner</span>
+                    </div>
+                    <p class="testimonial-text">"During the DEPI initiative, Youssef showed exceptional commitment. His
+                        grasp of .NET architecture patterns like Repository and Unit of Work was highly impressive."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Sara Mostafa</h4>
+                            <span>DEPI Training Instructor</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-check-circle"></i> Excellent Student</span>
+                    </div>
+                    <p class="testimonial-text">"Youssef's Talabat Store API was a highlight of the course. He
+                        implemented Stripe integration and advanced order management with professionalism that exceeded
+                        expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">OH</div>
+                        <div class="testimonial-info">
+                            <h4>Omar Hassan</h4>
+                            <span>Senior Instructor, Route Academy</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="t-card-top">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="t-badge"><i class="fas fa-star"></i> Top Performer</span>
+                    </div>
+                    <p class="testimonial-text">"Working with Youssef on the MVC Inventory System was a great
+                        experience. He delivered clean, maintainable code on time with deep understanding of SQL Server
+                        and design patterns."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">NK</div>
+                        <div class="testimonial-info">
+                            <h4>Nour Khalil</h4>
+                            <span>Team Lead, Hyperd</span>
+                        </div>
+                        <a href="#" class="t-social"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div><!-- end marquee -->
+        </div><!-- end wrap -->
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-ar="تواصل معي">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3 data-en="Let's Talk" data-ar="لنتحدث">Let's Talk</h3>
+                    <p data-en="Have a project in mind or want to discuss the latest in tech? Feel free to reach out."
+                        data-ar="لديك مشروع أو تريد مناقشة أحدث ما في التقنية؟ لا تتردد في التواصل.">Have a project in
+                        mind or want to discuss the latest in tech? Feel free to reach out.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:yuossefezzatmostafa@gmail.com"
+                            style="color:inherit; text-decoration:none;">yuossefezzatmostafa@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://wa.me/201147903693" target="_blank" rel="noopener" aria-label="WhatsApp"
+                            class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+201147903693" style="color:inherit;text-decoration:none;" dir="ltr">+20
+                            1147903693</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span data-en="Cairo, Egypt" data-ar="القاهرة، مصر">Cairo, Egypt</span>
+                    </div>
+                </div>
+
+
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/yuossefezzatmostafa@gmail.com"
+                    method="POST">
+                    <!-- Config: Redirect to same page after submission (optional but recommended) -->
+                    <input type="hidden" name="_next" value="#hero">
+                    <input type="hidden" name="_subject" value="New Submission from Portfolio!">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" data-en-placeholder="Your Name"
+                            data-ar-placeholder="اسمك" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" data-en-placeholder="Your Email"
+                            data-ar-placeholder="بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" data-en-placeholder="Your Message"
+                            data-ar-placeholder="رسالتك" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-en="Send Message" data-ar="إرسال رسالة">Send
+                        Message <i class="fas fa-paper-plane"></i></button>
+
+                    <!-- Inline success banner (shown after submit, replaces popup) -->
+                    <div id="success-message" class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Your message has been sent successfully! I'll get back to you soon.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <!-- Brand -->
+            <div class="footer-brand">
+                <a href="#hero" class="logo footer-logo">Y.<span>E</span></a>
+                <p data-en="Back-End Developer focused on building scalable .NET web applications with clean, maintainable code."
+                    data-ar="مطور Back-End متخصص في بناء تطبيقات ويب .NET قابلة للتطوير بكود نظيف.">Back-End Developer
+                    focused on building scalable .NET web applications with clean, maintainable code.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Yuossef-ezzat" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yuossef-ezzat-168248306" target="_blank"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:yuossefezzatmostafa@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                <ul>
+                    <li><a href="#hero" data-en="Home" data-ar="الرئيسية"><i class="fas fa-chevron-right"></i> Home</a>
+                    </li>
+                    <li><a href="#about" data-en="About" data-ar="عني"><i class="fas fa-chevron-right"></i> About</a>
+                    </li>
+                    <li><a href="#skills" data-en="Skills" data-ar="المهارات"><i class="fas fa-chevron-right"></i>
+                            Skills</a></li>
+                    <li><a href="#projects" data-en="Projects" data-ar="المشاريع"><i class="fas fa-chevron-right"></i>
+                            Projects</a></li>
+                    <li><a href="#testimonials" data-en="Testimonials" data-ar="آراء العملاء"><i
+                                class="fas fa-chevron-right"></i> Testimonials</a></li>
+                    <li><a href="#contact" data-en="Contact" data-ar="تواصل"><i class="fas fa-chevron-right"></i>
+                            Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+                <h4 data-en="Contact" data-ar="تواصل">Contact</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> yuossefezzatmostafa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> <span class="phone-num" dir="ltr">+20 1147903693</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p dir="ltr">&copy; 2026 <span>Youssef Ezzat</span>. All rights reserved. Built with <i
+                    class="fas fa-heart"></i>
+                &amp; Code.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <a href="#" class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Scripts -->
+    <script src="src/Script.js"></script>
+</body>
+
+</html>

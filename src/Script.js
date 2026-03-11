@@ -322,12 +322,41 @@ if (contactForm) {
 
         if (langLabel) langLabel.textContent = lang === 'ar' ? 'EN' : 'AR';
 
+        // Special handling for hero-title: update first text node + name span
+        const heroTitle = document.querySelector('.hero-title');
+        if (heroTitle) {
+            const prefix = lang === 'ar' ? 'مرحباً، أنا' : "Hi, I'm";
+            const nameSpan = heroTitle.querySelector('span');
+            // Clear and rebuild
+            heroTitle.innerHTML = '';
+            heroTitle.appendChild(document.createTextNode(prefix + ' '));
+            heroTitle.appendChild(document.createElement('br'));
+            heroTitle.appendChild(document.createTextNode(' '));
+            if (nameSpan) {
+                nameSpan.textContent = lang === 'ar' ? 'يوسف عزت' : 'Youssef Ezzat';
+                heroTitle.appendChild(nameSpan);
+            } else {
+                const span = document.createElement('span');
+                span.textContent = lang === 'ar' ? 'يوسف عزت' : 'Youssef Ezzat';
+                heroTitle.appendChild(span);
+            }
+        }
+
         getTranslatables().forEach(el => {
+            // Skip hero-title since we handled it above
+            if (el.classList && el.classList.contains('hero-title')) return;
+
             const text = el.getAttribute('data-' + lang);
             if (!text) return;
 
             const hasChildElements = el.children.length > 0;
             if (hasChildElements) {
+                // Handle dt elements with .exp-label spans
+                const expLabel = el.querySelector('.exp-label');
+                if (expLabel) {
+                    expLabel.textContent = text;
+                    return;
+                }
                 for (const node of el.childNodes) {
                     if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
                         node.textContent = text + ' ';

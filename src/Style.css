@@ -356,14 +356,14 @@
 /* Experience / Timeline */
 [dir="rtl"] .timeline {
     padding-left: 0;
-    padding-right: 24px;
+    padding-right: 30px;
     border-left: none;
     border-right: 2px solid var(--accent-color);
 }
 
 [dir="rtl"] .timeline-dot {
     left: auto;
-    right: -11px;
+    right: -39px;
 }
 
 [dir="rtl"] .timeline-content {
@@ -377,6 +377,10 @@
 [dir="rtl"] .timeline-desc dt {
     flex-direction: row-reverse;
     justify-content: flex-end;
+}
+
+[dir="rtl"] .timeline-desc dd {
+    margin: 5px 23px 0 0;
 }
 
 [dir="rtl"] .timeline-company {
@@ -419,9 +423,6 @@
     justify-content: flex-end;
 }
 
-[dir="rtl"] .timeline-desc dt {
-    flex-direction: row-reverse;
-}
 
 /* Contact */
 [dir="rtl"] .contact-wrapper {
@@ -2282,68 +2283,41 @@ section:nth-of-type(even) {
 
 .timeline {
     position: relative;
-    max-width: 1200px;
-    /* Increased from 800px to allow wider items */
+    max-width: 900px;
     margin: 0 auto;
     padding: 40px 0;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: var(--accent-gradient);
-    transform: translateX(-50%);
+    padding-left: 30px;
+    border-left: 2px solid var(--accent-color);
 }
 
 .timeline-item {
-    padding: 20px 40px;
+    padding: 0 0 40px 30px;
     position: relative;
-    width: 50%;
-    /* Reverted to 50% to maintain split layout */
+    width: 100%;
     box-sizing: border-box;
-    /* Reset left/text-align since user might have messed them up */
-}
-
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
 }
 
 .timeline-dot {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     background: var(--accent-color);
     border-radius: 50%;
-    top: 25px;
+    top: 6px;
+    left: -39px;
     box-shadow: 0 0 10px var(--accent-color);
     z-index: 10;
-}
-
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -10px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -10px;
+    border: 2px solid var(--bg-primary);
 }
 
 .timeline-content {
     background: var(--bg-card);
-    padding: 20px;
+    padding: 30px 35px;
     text-align: left;
     border-radius: var(--border-radius);
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .timeline-content:hover {
@@ -2385,33 +2359,37 @@ section:nth-of-type(even) {
     margin: 0;
 }
 
-/* Challenge - Orange/Red */
+.timeline-desc dt {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 14px;
+    line-height: 1.2;
+}
+
+/* Challenge - Amber */
 .timeline-desc dt:nth-of-type(1) {
     color: #f59e0b;
-    /* Amber 500 */
 }
-
-.timeline-desc dt:nth-of-type(1) i {
+.timeline-desc dt:nth-of-type(1) .exp-icon {
     color: #f59e0b;
 }
 
-/* Action - Blue/Primary */
+/* Action - Blue */
 .timeline-desc dt:nth-of-type(2) {
     color: #3b82f6;
-    /* Blue 500 */
 }
-
-.timeline-desc dt:nth-of-type(2) i {
+.timeline-desc dt:nth-of-type(2) .exp-icon {
     color: #3b82f6;
 }
 
 /* Result - Green */
 .timeline-desc dt:nth-of-type(3) {
     color: #10b981;
-    /* Emerald 500 */
 }
-
-.timeline-desc dt:nth-of-type(3) i {
+.timeline-desc dt:nth-of-type(3) .exp-icon {
     color: #10b981;
 }
 
@@ -2419,17 +2397,21 @@ section:nth-of-type(even) {
     margin-top: 0;
 }
 
-.timeline-desc dt i {
-    color: var(--accent-color);
+.timeline-desc dt .exp-icon {
     font-size: 0.9rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.timeline-desc dt .exp-label {
+    line-height: 1.2;
 }
 
 .timeline-desc dd {
     font-size: 0.95rem;
     color: var(--text-secondary);
-    margin: 4px 0 0 24px;
-    /* Indent under title */
-    line-height: 1.5;
+    margin: 5px 0 0 23px;
+    line-height: 1.6;
 }
 
 /* =========================================
@@ -2633,27 +2615,22 @@ section:nth-of-type(even) {
         padding: 36px 28px;
     }
 
-    /* Timeline Responsive */
-    .timeline::before {
-        left: 20px;
+    /* Timeline Responsive — single-column layout, just reduce padding */
+    .timeline {
+        padding-left: 20px;
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 50px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 0;
         text-align: left !important;
     }
 
-    .timeline-item:nth-child(even) {
-        left: 0;
+    .timeline-dot {
+        left: -29px;
     }
 
-    .timeline-item:nth-child(odd) .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot {
-        left: 10px;
-        right: auto;
-    }
 }
 
 @media (max-width: 480px) {
@@ -2695,8 +2672,8 @@ section:nth-of-type(even) {
 
     /* Adjust container padding */
     .container {
-        padding: 0 20px;
-        width: 310px;
+        padding: 0 16px;
+        width: 100%;
     }
 
     /* Form Fixes for Small Screens */
@@ -2711,48 +2688,124 @@ section:nth-of-type(even) {
     }
 }
 
-/* Very Small Screens (e.g. iPhone SE / Galaxy Fold) */
+/* Very Small Screens (320px and below) */
 @media (max-width: 320px) {
 
-    .header {
-        padding: 10px 0;
+    /* ── Container: full width, minimal padding ── */
+    .container {
+        padding: 0 12px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .logo {
-        font-size: 1.2rem;
+    /* ── Header: compact ── */
+    .header {
+        padding: 8px 0;
+    }
+
+    .header-container {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .icon-toggle-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.78rem;
+    }
+
+    .nav-right {
+        gap: 8px;
     }
 
     .menu-btn {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    /* ── Hero ── */
+    .hero-section {
+        padding-top: 75px;
+        padding-bottom: 30px;
+    }
+
+    .hero-container-flex {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .img-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.72rem;
+        letter-spacing: 1.5px;
+        padding: 6px 12px;
     }
 
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
     }
 
     .hero-title span {
-        font-size: 2rem;
+        font-size: 1.9rem;
+    }
+
+    .hero-role {
+        font-size: 1.15rem;
+    }
+
+    .hero-description {
+        font-size: 0.92rem;
+        line-height: 1.7;
     }
 
     .hero-buttons {
+        flex-direction: column;
         gap: 10px;
         width: 100%;
     }
 
     .btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
+        padding: 11px 16px;
+        font-size: 0.88rem;
         width: 100%;
         max-width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 
+    .hero-socials {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* ── About ── */
     .about-image .img-placeholder-hero {
-        width: 180px;
-        height: 180px;
+        width: 170px;
+        height: 170px;
         font-size: 3rem;
         border-width: 2px;
     }
 
+    /* ── Section titles ── */
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 36px;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    /* ── Skills / Services / Projects ── */
     .skills-grid,
     .services-list,
     .projects-grid,
@@ -2760,42 +2813,107 @@ section:nth-of-type(even) {
         grid-template-columns: 1fr;
     }
 
-    /* Ensure form doesn't break */
+    .skill-card,
+    .service-item {
+        padding: 24px 20px;
+    }
+
+    /* ── Timeline (Experience) ── */
+    .timeline {
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+
+    .timeline-item {
+        padding: 0 0 30px 22px;
+    }
+
+    .timeline-dot {
+        left: -29px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-content {
+        padding: 20px 18px;
+    }
+
+    .timeline-role {
+        font-size: 1rem;
+    }
+
+    .timeline-company {
+        font-size: 0.85rem;
+    }
+
+    .timeline-desc dt {
+        font-size: 0.85rem;
+        gap: 5px;
+    }
+
+    .timeline-desc dd {
+        font-size: 0.85rem;
+        margin-left: 18px;
+    }
+
+    /* ── RTL timeline on 320px ── */
+    [dir="rtl"] .timeline {
+        padding-left: 0;
+        padding-right: 20px;
+    }
+
+    [dir="rtl"] .timeline-item {
+        padding: 0 22px 30px 0;
+    }
+
+    [dir="rtl"] .timeline-dot {
+        left: auto;
+        right: -29px;
+    }
+
+    [dir="rtl"] .timeline-desc dd {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+
+    /* ── Contact ── */
     .contact-wrapper {
         border-radius: 10px;
     }
 
-    .contact-info {
-        padding: 24px 16px;
+    .contact-info,
+    .contact-form {
+        padding: 20px 14px;
     }
 
     .contact-info h3 {
-        font-size: 1.2rem;
-    }
-
-    .contact-form {
-        padding: 24px 16px;
+        font-size: 1.15rem;
     }
 
     .contact-item {
         font-size: 0.78rem;
         gap: 8px;
+        padding: 10px 12px;
     }
 
     .form-group input,
     .form-group textarea {
         padding: 10px;
-        font-size: 0.8rem;
+        font-size: 0.82rem;
     }
 
-    .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 40px;
-    }
-
+    /* ── Scroll to top ── */
     .scroll-to-top {
-        bottom: 20px;
-        right: 20px;
+        bottom: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    [dir="rtl"] .scroll-to-top {
+        right: auto;
+        left: 16px;
     }
 }
 
